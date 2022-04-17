@@ -36,11 +36,11 @@ export const delay = time => data =>
 
 export const retry = (retries, time, fn) => {
     return fn()
-    //.then(Promise.resolve(res))
     .catch(err =>
         {
             console.log(retries)
-            return delay(time)().then(() => retries > 1 ? retry(--retries, time, fn) : Promise.reject('Não foi possível obter conexão'))
+            return delay(time)().then(() => 
+            retries > 1 ? retry(--retries, time, fn) : Promise.reject('Não foi possível obter conexão'))
         }
     )
 }

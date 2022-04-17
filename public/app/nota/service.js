@@ -1,7 +1,7 @@
 import { log, handleStatus } from '../utils/promise-helpers.js';
 import { partialize, compose, pipe } from '../utils/operators.js';
 
-const API = 'http://localhost:3000/notas'
+const API = 'http://localhost:3000/notasx'
 
 const getItemsFromNotas = notas => notas.flatMap(nota => nota.itens);
 const filterItemsByCode = (code, items) => items.filter(item => item.codigo == code);
@@ -23,7 +23,7 @@ export const notasService = {
 
         return this.listAll()
         .then(sumItems)
-        .catch(err => 'Não foi possível fazer a soma dos valores.') //'Não foi possível fazer a soma dos valores.'
+        .catch(err => Promise.reject(err)) //'Não foi possível fazer a soma dos valores.'
     }
 };
 
