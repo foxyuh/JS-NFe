@@ -12,6 +12,28 @@ import { takeUntil, debounceTime, partialize, pipe, retry, compose} from './util
 Notas: O erro trazido pelo takeUntil deve ser TRATADO, para novas requisições poderem serem feitas
 */
 
+
+const operations = compose ( // compose\pipe -> método para encadear funções em cima de uma única função
+    partialize(debounceTime, 500), // debouceTime -> feature de delay durante tentativas na hora e emitir
+    partialize(takeUntil, 3) // takeUntil -> feature que indica a quantidade de tentativas permitida
+);
+
+const sumOperations = pipe (
+    partialize(retry, 5, 3000),
+    partialize(timeoutPromise, 200)
+);
+
+const somarValores = code => operations(() => 
+sumOperations(() => service.sumItems(code))
+.then(console.log)
+.catch(console.log)
+);
+
+document
+.querySelector('#myButton')
+.onclick = somarValores('2143');
+
+/*
 const sum = code => service.sumItems(code)
 const timeout = (time, sum) => timeoutPromise(time, sum)
 
@@ -34,6 +56,26 @@ const action = // outra forma mais padrão de aplicar o propósito da aplicaçã
         takeUntil(3,
             somarValores))
 
-document
-.querySelector('#myButton')
-.onclick = operations;
+=======
+
+const operations = compose ( // compose\pipe -> método para encadear funções em cima de uma única função
+    partialize(debounceTime, 500), // debouceTime -> feature de delay durante tentativas na hora e emitir
+    partialize(takeUntil, 3) // takeUntil -> feature que indica a quantidade de tentativas permitida
+);
+
+const sumOperations = pipe (
+    partialize(retry, 5, 3000),
+    partialize(timeoutPromise, 200)
+);
+
+const somarValores = code => operations(() => 
+sumOperations(() => service.sumItems(code))
+.then(console.log)
+.catch(console.log)
+);
+
+const action = // outra forma mais padrão de aplicar o propósito da aplicação logo a cima 
+    debounceTime(500, 
+        takeUntil(3,
+            somarValores))
+*/

@@ -19,7 +19,11 @@ export const notasService = {
     sumItems(code) {
 
         const filterItems = partialize(filterItemsByCode, code); // filterItemsByCode.bind(null, code)
-        const sumItems = pipe(getItemsFromNotas, filterItems, sumItemsValue); // compose(sumItemsValue, filterItems, getItemsFromNotas);
+        const sumItems = pipe(
+            getItemsFromNotas, 
+            filterItems, 
+            sumItemsValue
+        ); // compose(sumItemsValue, filterItems, getItemsFromNotas);
 
         return this.listAll()
         .then(sumItems)
