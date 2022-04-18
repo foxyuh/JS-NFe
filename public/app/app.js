@@ -1,12 +1,6 @@
-import { log } from './utils/promise-helpers.js';
 import { notasService as service } from './nota/service.js';
-import { takeUntil, debounceTime, partialize, pipe, retry} from './utils/operators.js';
-
-export const somarValores = () =>  
-sumOperations('2143')
-//retry(5, 2000, () => service.sumItems('2143'))
-.then(console.log)
-.catch(console.log)
+import { log, timeoutPromise } from './utils/promise-helpers.js';
+import { takeUntil, debounceTime, partialize, pipe, retry, compose} from './utils/operators.js';
 
 
 // somarValores -> faz a requisição API e soma os valores pela função sumItems() que nela deve ser
@@ -14,22 +8,32 @@ sumOperations('2143')
 
 // '2143'
 
-const sumOperations = code => pipe(
-    partialize(retry, 5, 2000)
-)(() => service.sumItems(code))
-
 /*
-const operations = pipe ( // pipe -> método para encadear funções em cima de uma única função
+Notas: O erro trazido pelo takeUntil deve ser TRATADO, para novas requisições poderem serem feitas
+*/
+
+const sum = code => service.sumItems(code)
+const timeout = (time, sum) => timeoutPromise(time, sum)
+
+const sumOperations = code => compose (
+    partialize(retry, 5, 3000)
+)(() => timeout(200, sum(code)))
+
+const somarValores = () => 
+sumOperations('2143')
+.then(console.log)
+.catch(console.log)
+
+const operations = compose ( // compose\pipe -> método para encadear funções em cima de uma única função
     partialize(debounceTime, 500), // debouceTime -> feature de delay durante tentativas na hora e emitir
     partialize(takeUntil, 3) // takeUntil -> feature que indica a quantidade de tentativas permitida
 )(somarValores)
-*/
 
 const action = // outra forma mais padrão de aplicar o propósito da aplicação logo a cima 
     debounceTime(500, 
         takeUntil(3,
-        somarValores))
+            somarValores))
 
 document
 .querySelector('#myButton')
-.onclick = action;
+.onclick = operations;

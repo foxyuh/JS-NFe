@@ -1,7 +1,6 @@
 export const partialize = (fn, ...params) =>
     fn.bind(null, ...params);
     
-
 export const compose = (...fns) => value =>
     fns.reduceRight((previousValue, fn) =>
         fn(previousValue), value);
@@ -29,7 +28,7 @@ export const debounceTime = (milliseconds, fn) => {
     };
 };
 
-export const delay = time => data =>
+const delay = time => data =>
     new Promise((resolve, reject) => 
     setTimeout(() => resolve(data), time)
 ) 
@@ -38,9 +37,10 @@ export const retry = (retries, time, fn) => {
     return fn()
     .catch(err =>
         {
-            console.log(retries)
-            return delay(time)().then(() => 
-            retries > 1 ? retry(--retries, time, fn) : Promise.reject('Não foi possível obter conexão'))
+                console.log(err)
+                console.log(`${retries}° Tentativa`)
+                return delay(time)().then(() => 
+                retries > 1 ? retry(--retries, time, fn) : Promise.reject('Não foi possível obter conexão'))
         }
     )
 }
