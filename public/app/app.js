@@ -1,6 +1,7 @@
 import { notasService as service } from './nota/service.js';
 import { log, timeoutPromise } from './utils/promise-helpers.js';
 import { takeUntil, debounceTime, partialize, pipe, retry, compose} from './utils/operators.js';
+import { EventEmitter } from "./utils/event-emitter.js";
 
 
 // somarValores -> faz a requisição API e soma os valores pela função sumItems() que nela deve ser
@@ -25,8 +26,10 @@ const sumOperations = pipe (
 
 const somarValores = code => operations(() => 
 sumOperations(() => service.sumItems(code))
-.then(console.log)
-.catch(console.log)
+.then(total => {
+    EventEmitter.emit('itensTotalizados', total)
+})
+.catch(log)
 );
 
 document
