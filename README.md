@@ -1,2 +1,2 @@
-# JS-NFe
- Sistema emissor de Nota Fiscal Eletrônica (NF-e) com Javascript.
+# nfe-js
+ Este projeto ainda não foi finalizado.
