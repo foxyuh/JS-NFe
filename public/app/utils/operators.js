@@ -34,6 +34,7 @@ const delay = time => data =>
 ) 
 
 export const retry = (retries, time, fn) => {
+
     return fn()
     .catch(err =>
         {

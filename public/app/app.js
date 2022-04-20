@@ -2,6 +2,19 @@ import { notasService as service } from './nota/service.js';
 import { log, timeoutPromise } from './utils/promise-helpers.js';
 import { takeUntil, debounceTime, partialize, pipe, retry, compose} from './utils/operators.js';
 import { EventEmitter } from "./utils/event-emitter.js";
+// import { Maybe } from './utils/Maybe.js';
+
+/*
+const maybe1 = Maybe.of(10)
+.map(value => value + 10)
+.map(value => value + 20)
+.getOrElse(0)
+alert(maybe1)
+
+## criando mônadas e testando o Maybe pattern na aplicação
+*/
+
+
 
 
 // somarValores -> faz a requisição API e soma os valores pela função sumItems() que nela deve ser
@@ -19,17 +32,25 @@ const operations = compose ( // compose\pipe -> método para encadear funções 
     partialize(takeUntil, 3) // takeUntil -> feature que indica a quantidade de tentativas permitida
 );
 
+/*
 const sumOperations = pipe (
     partialize(retry, 5, 3000),
-    partialize(timeoutPromise, 200)
 );
+*/
 
-const somarValores = code => operations(() => 
-sumOperations(() => service.sumItems(code))
-.then(total => {
-    EventEmitter.emit('itensTotalizados', total)
-})
-.catch(log)
+
+//sumOperations(() => service.sumItems(code))
+
+const somarValores = code => 
+operations(() =>
+retry(5, 3000, () => 
+    timeoutPromise(1000, 
+        service.sumItems(code))
+)
+.then(total => 
+    EventEmitter.emit('itensTotalizados', total))
+.catch(err => 
+    console.log(err))
 );
 
 document
