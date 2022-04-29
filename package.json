@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ufoxy/checkout-page/issues"
   },
-  "homepage": "https://github.com/ufoxy/checkout-page#readme"
+  "homepage": "https://github.com/ufoxy/checkout-page#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
 }
