@@ -1,0 +1,23 @@
+.div-main {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+
+}
+
+.section-pagamento {
+
+    width: 630px;
+    height: 570px;
+
+    background-color: #FFFFFF;
+}
+
+.section-info {
+
+    width: 320px;
+    height: 570px;
+
+    background-color: #F4F4F4;
+}
