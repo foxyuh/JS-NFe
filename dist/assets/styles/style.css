@@ -40,11 +40,13 @@ body {
 }
 
 .section-pagamento {
-
+    
     width: 630px;
     height: 570px;
 
     background-color: #FFFFFF;
+    
+    border-top: rgb(61, 61, 61, 0.1) solid 1px;
 }
 
 .titulo-checkout {
@@ -55,8 +57,32 @@ body {
     font-size: 32px;
 
     margin-bottom: 1em;
+    
+    gap: 5px;
+}
+
+.small {
+
+    opacity: 90%;
+    padding-bottom: 2px;
+    font-size: 16px;
+}
+
+.login-txt {
+
+    display: flex;
+    align-items: center;
+
+    color: rgb(61, 61, 61, 0.8);
+    padding-bottom: 15px;
 
     gap: 5px;
+}
+
+.login {
+    
+    color: #489CCE;
+    text-decoration: none;
 }
 
 .sub-titulo-checkout {
@@ -70,16 +96,10 @@ body {
 
     border-top: rgb(61, 61, 61, 0.5) solid 1px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.small {
-
-    opacity: 90%;
-    padding-bottom: 2px;
-    font-size: 16px;
-}
 
 .input {
 
@@ -123,6 +143,10 @@ body {
     height: 570px;
 
     background-color: #F4F4F4;
+
+    border-top: rgb(61, 61, 61, 0.1) solid 1px;
+    border-left: rgb(61, 61, 61, 0.1) solid 1px;
+    border-right: rgb(61, 61, 61, 0.1) solid 1px;
 }
 
 .titulo-pedido {
