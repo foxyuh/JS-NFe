@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
     <main class="main">
 
         <div class="div-main">
-            <section class="section-pagamento">
+            <section class="section-pagamento container">
                 <h1>Checkout Seguro<small>powered by ( ... )</small></h1>            
                 <!-- <div>
                     <button type="button" name="dropdown-linguagem">Português</button>
@@ -51,30 +52,54 @@
                 
             </section>
     
-            <section class="section-info">
-                <h1>Seu Pedido</h1>
-                <button>Continuar</button>
-                <p class="info-itens-txt">
+            <section class="section-info container">
+                <h1 class="pedido-txt">
+                    <span class="material-icons md-36">
+                        shopping_cart
+                    </span>
+                    Seu Pedido
+                </h1>
+                <button class="botao">
+                    Continuar
+                    <span class="material-icons">
+                        navigate_next
+                    </span>
+                </button>
+                <p class="info-txt info-itens-txt">
                     Itens
-                    <span>
+                    <span class="info-valor">
                         R$4.399,90
                     </span>
                 </p>
                 <p class="info-envio-txt">
-                    Envio
-                    <span class="info-envio">
-                        R$23,10
-                    </span>
+                    <div class="info-txt">
+                        <div class="info-txt-with-help">
+                            Envio
+                            <span class="material-icons md-18 md-gray">
+                                help
+                            </span>
+                        </div>
+                        <span class="info-envio">
+                            R$23,10
+                        </span>
+                    </div>
                 </p>
                 <p class="info-deveres&taxas-txt">
-                    Deveres & Taxas
-                    <span>
-                        R$0,0
-                    </span>
+                    <div class="info-txt">
+                        <div class="info-txt-with-help">
+                            Deveres & Taxas
+                            <span class="material-icons md-18 md-gray">
+                                help
+                            </span>
+                        </div>
+                        <span class="info-deveres&taxas">
+                            R$0,0
+                        </span>
+                    </div>
                 </p>
-                <h2 class="info-total-txt">TOTAL
+                <h2 class="info-txt info-total-txt">TOTAL
                     <span class="info-total">
-                        <small class="moeda">(BRL)</small>R$4.423,00
+                        <small class="info-moeda">(BRL)</small>R$4.423,00
                     </span>
                 </h2>
     
@@ -84,11 +109,11 @@
                     <li class="produto-selecionado">
                         <img src="assets/imgs/ps5.png" class="img-produto" alt="imagem do produto">
                         <div>
-                            <p class="item-info-nome">Playstation 5</p>
-                            <p class="item-info-cor">Preto/Branco</p>
-                            <p class="item-info-tamanho">30cm</p>
-                            <p class="item-info-quantidade">1</p>
-                            <p class="item-info-valor">R$4.399,90</p>
+                            <p class="item-info item-info-nome">Playstation 5</p>
+                            <p class="item-info item-info-cor">Cor: Preto/Branco</p>
+                            <p class="item-info item-info-tamanho">Tamanho: 30cm</p>
+                            <p class="item-info item-info-quantidade">Quantidade: 1</p>
+                            <p class="item-info item-info-valor">R$4.399,90</p>
                         </div>
                     </li>
                 </ul>
