@@ -1,4 +1,5 @@
 document.querySelector('.tabela').addEventListener('change', function (event) {
+
     const evento = event.target;
     document
         .querySelectorAll('.tr-tbody')
