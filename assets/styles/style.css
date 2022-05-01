@@ -291,10 +291,6 @@ body {
     padding-bottom: 16px;
 }
 
-.input-selecionado {
-    border: #489CCE solid 1px;
-}
-
 .td-flex-column {
 
     display: flex;
@@ -345,4 +341,10 @@ body {
     margin-left: auto;
 
     opacity: 60%;
+  
+}
+
+.tr-activate {
+    border: #489CCE solid 1px;
+
 }

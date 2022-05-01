@@ -1,14 +1,11 @@
 document.querySelector('.tabela').addEventListener('change', function (event) {
 
+    const evento = event.target;
     document
-    .querySelectorAll('.tr')
-    .forEach(element => 
-        element.classList.remove('produto-selecionado')
-    );
-
-    if (event.target.name == 'radio-tabela' && event.target.checked) {
-        const parent = event.target.parentNode.parentNode
-        parent.classList.add('produto-selecionado')
+        .querySelectorAll('.tr-tbody')
+        .forEach(element => element.classList.remove('tr-activate'));
+    if (evento.name == 'radio-tabela' && evento.checked) {
+        const parent = evento.parentNode.parentNode;
+        parent.classList.add('tr-activate');
     }
-
-})
+});
