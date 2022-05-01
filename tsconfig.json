@@ -1,0 +1,11 @@
+{
+    // "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "ES6",
+        "noEmitOnError": true,
+        "noImplicitAny": false,
+        "removeComments": true
+    },
+    "include": ["src/**/*"]
+}

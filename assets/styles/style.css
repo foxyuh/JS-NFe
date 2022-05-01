@@ -342,3 +342,7 @@ body {
 
     opacity: 60%;
 }
+
+.tr-activate {
+    border: #489CCE solid 1px;
+}
