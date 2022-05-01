@@ -41,7 +41,7 @@ body {
 
 .section-pagamento {
     
-    width: 630px;
+    width: 720px;
     height: 570px;
 
     background-color: #FFFFFF;
@@ -80,7 +80,7 @@ body {
 }
 
 .login {
-    
+
     color: #489CCE;
     text-decoration: none;
 }
@@ -250,4 +250,63 @@ body {
 
     width: 120px;
     height: 110px;
+}
+
+.tabela {
+
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tr-thead {
+
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+
+    background-color: #F4F4F4;
+}
+
+.th {
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.th-metodo-de-entrega {
+    padding-left: calc(15px + 23px + 28px);
+    width: 120px;
+}
+
+.td {
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.td-flex-column {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.td-flex-row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    width: 350px;
+
+    padding-left: 28px;
+    gap: 22px;
+}
+
+.radio-tabela {
+
+    height: 16px;
+    width: 16px;
 }
