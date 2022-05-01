@@ -291,6 +291,10 @@ body {
     padding-bottom: 16px;
 }
 
+.input-selecionado {
+    border: #489CCE solid 1px;
+}
+
 .td-flex-column {
 
     display: flex;
