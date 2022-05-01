@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Compra</title>
-    
+
     <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/reset.css">
@@ -21,7 +21,21 @@
 
         <div class="div-main">
             <section class="section-pagamento container">
-                <h1>Checkout Seguro<small>powered by ( ... )</small></h1>            
+                <h1 class="titulo-checkout">
+                    <span class="material-icons md-36">
+                        lock
+                    </span>
+                    Pagamento Seguro
+                    <small class="small">
+                        powered by ( ... )
+                    </small>
+                </h1>
+                <p class="login-txt">
+                    Já possui uma conta em ( ... )? Clique <a href="#" class="login">aqui.</a>
+                    <span class="material-icons md-18 md-gray">
+                        help
+                    </span>
+                </p>
                 <!-- <div>
                     <button type="button" name="dropdown-linguagem">Português</button>
                     <div class="dropdown-linguagem-content">
@@ -36,23 +50,134 @@
                         <button type="button" name="dropdown-pagemento-paypal">Paypal</button>
                     </div>
                 </div> -->
-                <h2>Entrega</h2>
-                <input type="text" name="" id="" placeholder="Email">
-                <input type="text" name="" id="" placeholder="Primeiro Nome">
-                <input type="text" name="" id="" placeholder="Segundo Nome">
-                <input type="text" name="" id="" placeholder="Endereço">
-                <input type="text" name="" id="" placeholder="Endereço (Opcional)">
-                <input type="text" name="" id="" placeholder="Código Postal">
-                <input type="text" name="" id="" placeholder="Cidade">
-                <input type="text" name="" id="" placeholder="Complemento (Opcional)">
-                <input type="text" name="" id="" placeholder="Telefone">
-                <input type="text" name="" id="" placeholder="Estado">
+                <h2 class="sub-titulo-checkout">
+                    <span class="material-icons md-black">
+                        looks_one
+                    </span>
+                    Entrega
+                </h2>
+                <div class="input-flex-column">
+                    <input type="text" class="input input-max-size" name="" id="" placeholder="Email">
+                    <div class="input-flex-row">
+                        <input type="text" class="input" name="" id="" placeholder="Primeiro Nome">
+                        <input type="text" class="input" name="" id="" placeholder="Segundo Nome">
+                    </div>
+                    <input type="text" class="input input-max-size" name="" id="" placeholder="Endereço">
+                    <div class="input-flex-row">
+                        <div class="input-flex-column">
+                            <input type="text" class="input" name="" id="" placeholder="Endereço 2 (Opcional)">
+                            <input type="text" class="input" name="" id="" placeholder="Código Postal">
+                            <input type="text" class="input" name="" id="" placeholder="Cidade">
+                        </div>
+                        <div class="input-flex-column">
+                            <input type="text" class="input" name="" id="" placeholder="Complemento (Opcional)">
+                            <input type="text" class="input" name="" id="" placeholder="Telefone">
+                            <input type="text" class="input" name="" id="" placeholder="Estado">
+                        </div>
+                    </div>
+                </div>
     
+                <table class="tabela">
+                    <thead>
+                        <tr class="tr-thead">
+                            <th class="th th-metodo-de-entrega">Método de Entrega</th>
+                            <th class="th">Tempo Estimado</th>
+                            <th class="th">Custo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr class="tr-tbody input-selecionado">
+                            <td class="td td-flex-row">
+                                <input type="radio" class="radio-tabela" name="radio-tabela" id="postal" checked>
+                                    <label for="postal" class="td-flex-column">
+                                        <p>Postal</p>
+                                        <p>taxas de importação cobradas na <br>entrega</p>
+                                    </label>
+                            </td>
+                            <td class="td">
+                                4-6 semanas
+                            </td>
+                            <td class="td">
+                                (BRL) R$23,10
+                            </td>
+                        </tr>
+
+                        <tr class="tr-tbody">
+                            <td class="td td-flex-row">
+                                <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                    <label for="postal" class="td-flex-column">
+                                        <p>Standard</p>
+                                        <p>sem taxas de importação adicionais na <br>entrega</p>
+                                    </label>
+                            </td>
+                            <td class="td">
+                                8-16 dias úteis
+                            </td>
+                            <td class="td">
+                                (BRL) R$23,10
+                            </td>
+                        </tr>
+
+                        <tr class="tr-tbody">
+                            <td class="td td-flex-row">
+                                <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                    <label for="postal" class="td-flex-column">
+                                        <p>Express</p>
+                                        <p>sem taxas de importação adicionais na <br>entrega</p>
+                                    </label>
+                            </td>
+                            <td class="td">
+                                9-14 dias úteis
+                            </td>
+                            <td class="td">
+                                (BRL) R$23,10
+                            </td>
+                        </tr>
+
+                        <tr class="tr-tbody">
+                            <td class="td td-flex-row">
+                                <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                    <label for="postal" class="td-flex-column">
+                                        <p>Express</p>
+                                        <p>taxas de importação cobradas na <br>entrega</p>
+                                    </label>
+                            </td>
+                            <td class="td">
+                                9-14 dias úteis
+                            </td>
+                            <td class="td">
+                                (BRL) R$23,10
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <button class="botao botao-checkout">
+                    Continuar
+                    <span class="material-icons">
+                        navigate_next
+                    </span>
+                </button>
+
+                <h2 class="sub-titulo-checkout sub-titulo-checkout-pagamento">
+                    <span class="material-icons md-gray">
+                        looks_two
+                    </span>
+                    Pagamento
+                </h2>
+
+                <footer class="footer">
+                    <p>
+                        Ao fazer seu pedido, você concordará com os <strong>Termos e Condições</strong> e <strong>Política de Privacidade</strong> de ( ... ). A ( ... ) é um comércio online que está localizado em ( ... ).
+                    </p>
+                </footer>
                 
             </section>
     
             <section class="section-info container">
-                <h1 class="pedido-txt">
+                <h1 class="titulo-pedido">
                     <span class="material-icons md-36">
                         shopping_cart
                     </span>
@@ -121,8 +246,6 @@
 
     </main>
 
-    <footer>
-
-    </footer>
+    <script src="js/components.js"></script>
 </body>
 </html>
