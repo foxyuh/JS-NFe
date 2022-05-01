@@ -110,7 +110,7 @@ body {
 
 .input {
 
-    width: 330px;
+    min-width: 330px;
     height: 38px;
 
     font-size: 16px;
@@ -141,6 +141,7 @@ body {
     justify-content: space-between;
     flex-direction: row;
 
+    gap: 1%;
     width: 100%;
 }
 
