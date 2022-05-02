@@ -1,6 +1,9 @@
 import { Entrega } from "../models/entrega.js";
 import { Informacoes } from "../models/informacoes.js";
 import { MetodoDeEntrega } from "../models/metodo-de-entrega.js";
+import { InfoItensView } from "../views/info-itens-view.js";
+import { InfoEnvioView } from "../views/info-envio-view.js";
+import { InfoTotalView } from "../views/info-total-view.js";
 
 export { CheckoutController };
 
@@ -21,12 +24,24 @@ class CheckoutController {
     metodoDeEntrega = []
     informacoes = new Informacoes();
 
+    infoItensView = new InfoItensView('#info-itens');
+    infoEnvioView = new InfoEnvioView('#info-envio');
+    infoTotalView = new InfoTotalView('p#info-total');
+
     constructor() {
+
         this.init();
     };
 
     init () {
 
+        // this.infoItensView.update('4.423,00')
+        // this.infoEnvioView.update('33,00')
+        // this.infoTotalView.update('4.423,00')
+
+        //R$4.399,90
+        //R$23,10
+        //R$4.423,00
     };
 
     adiciona() {
