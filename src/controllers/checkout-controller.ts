@@ -4,6 +4,9 @@ import { MetodoDeEntrega } from "../models/metodo-de-entrega.js";
 import { InfoItensView } from "../views/info-itens-view.js";
 import { InfoEnvioView } from "../views/info-envio-view.js";
 import { InfoTotalView } from "../views/info-total-view.js";
+import { Produto } from "../models/produto.js";
+import { Produtos } from "../models/produtos.js";
+import { ProdutosView } from "../views/produtos-view.js";
 
 export { CheckoutController };
 
@@ -24,6 +27,9 @@ class CheckoutController {
     metodoDeEntrega = []
     informacoes = new Informacoes();
 
+    produtos = new Produtos()
+
+    produtosView = new ProdutosView('#lista-de-produtos')
     infoItensView = new InfoItensView('#info-itens');
     infoEnvioView = new InfoEnvioView('#info-envio');
     infoTotalView = new InfoTotalView('p#info-total');
@@ -34,8 +40,11 @@ class CheckoutController {
     };
 
     init () {
-
+        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', '1', '4.399,90', 'assets/imgs/ps5.png');
+        this.produtos.adiciona(produto)
+        this.produtosView.update(this.produtos)
         this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
+        console.log(this.produtos.getProdutos)
         // this.infoItensView.update('4.423,00')
         // this.infoEnvioView.update('33,00')
         // this.infoTotalView.update('4.423,00')

@@ -1,7 +1,18 @@
+export { Produtos };
+
 class Produtos {
 
-    constructor() {
-        
-    }
+    private readonly produtos = [];
 
-}
+    adiciona(produto): void {
+
+        this.produtos.push(produto);
+
+    };
+
+get getProdutos() {
+    const produtos = [...this.produtos];
+    return produtos;
+};
+
+};
