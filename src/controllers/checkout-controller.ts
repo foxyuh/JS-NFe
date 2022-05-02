@@ -35,6 +35,7 @@ class CheckoutController {
 
     init () {
 
+        this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
         // this.infoItensView.update('4.423,00')
         // this.infoEnvioView.update('33,00')
         // this.infoTotalView.update('4.423,00')
@@ -71,6 +72,12 @@ class CheckoutController {
             });
         });
     };
+
+    atualizaMetodoDeEntrega(valorEntrega) {
+
+        this.infoEnvioView.update(valorEntrega)
+
+    }
 
 
 };
