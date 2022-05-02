@@ -11,4 +11,8 @@ protected template(model: string): string {
     `;
 };
 
+protected others(): void {
+    
+}
+
 };

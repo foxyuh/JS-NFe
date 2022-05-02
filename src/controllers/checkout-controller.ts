@@ -46,6 +46,7 @@ class CheckoutController {
         this.produtos.adiciona(produto)
         this.produtosView.update(this.produtos)
         this.infoItensView.update(this.produtos)
+        // this.infoTotalView.update(this.produtos)
         this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
         console.log(this.produtos.getProdutos)
         // this.infoItensView.update('4.423,00')
@@ -88,7 +89,7 @@ class CheckoutController {
     atualizaMetodoDeEntrega(valorEntrega) {
 
         this.infoEnvioView.update(valorEntrega)
-
+        
     }
 
 

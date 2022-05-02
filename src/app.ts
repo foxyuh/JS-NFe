@@ -14,6 +14,8 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
         const parent = evento.parentNode.parentNode;
         const valor = parent.querySelector('.number').innerText;
         checkoutController.atualizaMetodoDeEntrega(valor);
+        console.log(valor)
+        // checkoutController.atualizaTotal(valor)
     };
 
 });
