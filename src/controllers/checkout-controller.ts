@@ -30,10 +30,6 @@ class CheckoutController {
 
     produtos = new Produtos()
 
-    produtosView = new ProdutosView('#lista-de-produtos')
-    infoItensView = new InfoItensView('#info-itens');
-    infoEnvioView = new InfoEnvioView('#info-envio');
-    infoTotalView = new InfoTotalView('p#info-total');
 
     constructor() {
 
@@ -44,13 +40,14 @@ class CheckoutController {
         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', '1', '4.399,90', 'assets/imgs/ps5.png');
         this.produtos.adiciona(produto)
         this.produtos.adiciona(produto)
-        // this.produtos.adiciona(produto)
+        this.produtos.adiciona(produto)
 
-        EventEmitter.emit('SomarTotal', ['20,10', this.produtos])
-        
-        this.produtosView.update(this.produtos)
-        this.infoItensView.update(this.produtos)
-        this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
+        this.atualizaInformacoes('20,10', this.produtos)
+        //
+
+        // this.produtosView.update(this.produtos)
+        // this.infoItensView.update(this.produtos)
+        // this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
         console.log(this.produtos.getProdutos)
         // this.infoTotalView.update(this.produtos)
         // this.infoItensView.update('4.423,00')
@@ -90,11 +87,13 @@ class CheckoutController {
         });
     };
 
-    atualizaMetodoDeEntrega(valorEntrega) {
+    atualizaInformacoes(envio, produtos) {
 
-        this.infoEnvioView.update(valorEntrega)
-        
+        EventEmitter.emit('Exibe-Produtos', produtos)
+        EventEmitter.emit('Info-Itens', produtos)
+        EventEmitter.emit('Info-Envio', envio)
+        EventEmitter.emit('Info-Total', [envio, produtos])
+
     }
-
 
 };

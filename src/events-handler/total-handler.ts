@@ -2,9 +2,9 @@
 import { EventEmitter } from "../utils/event-emitter.js";
 import { InfoTotalView } from "../views/info-total-view.js";
 
-const infoTotalView = new InfoTotalView('#info-total')
+const infoTotalView = new InfoTotalView('#info-total');
 
-EventEmitter.on('SomarTotal', value => {
+EventEmitter.on('Info-Total', value => {
 
 
     const envio = realToDolar(value[0])
@@ -25,7 +25,6 @@ EventEmitter.on('SomarTotal', value => {
     // Desacoplar realToDolar e colocar em utils
 
     const total = envio + somaDosPrecos
-    console.log(total)
     infoTotalView.update(total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
     
 })

@@ -14,12 +14,10 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
     if (evento.name == 'radio-tabela' && evento.checked) {
         const parent = evento.parentNode.parentNode;
         const envio = parent.querySelector('.number').innerText;
-        checkoutController.atualizaMetodoDeEntrega(envio);
-        // console.log(valor)
         const produtos = checkoutController.produtos
+        checkoutController.atualizaInformacoes(envio, produtos);
+        // console.log(valor)
         console.log([envio, produtos])
-        EventEmitter.emit('SomarTotal', [envio, produtos])
-        // checkoutController.atualizaTotal(valor)
     };
 
 });
