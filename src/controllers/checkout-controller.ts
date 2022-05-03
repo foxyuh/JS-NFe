@@ -33,18 +33,17 @@ class CheckoutController {
     };
 
     init () {
+
         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', 'assets/imgs/ps5.png', 500);
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
 
         this.atualizaInformacoes('20,10', this.produtos)
-
-        console.log(this.produtos.getProdutos)
     };
 
     adiciona() {
-        
+
         const entrega = new Entrega(this.email, this.nome, this.sobrenome, this.endereço, this.endereço2, this.complemento, this.codigoPostal, this.telefone, this.cidade, this.estado);
         this.pegaMetodoDeEntrega();
         const metodoDeEntrega = new MetodoDeEntrega(this.metodoDeEntrega);
