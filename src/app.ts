@@ -1,3 +1,4 @@
+import { EventEmitter } from "./utils/event-emitter.js";
 import { CheckoutController } from "./controllers/checkout-controller.js";
 
 const checkoutController = new CheckoutController();
@@ -12,8 +13,11 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
 
     if (evento.name == 'radio-tabela' && evento.checked) {
         const parent = evento.parentNode.parentNode;
-        const valor = parent.querySelector('.number').innerText;
-        checkoutController.atualizaMetodoDeEntrega(valor);
+        const envio = parent.querySelector('.number').innerText;
+        const produtos = checkoutController.produtos
+        checkoutController.atualizaInformacoes(envio, produtos);
+        // console.log(valor)
+        console.log([envio, produtos])
     };
 
 });

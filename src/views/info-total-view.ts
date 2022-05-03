@@ -8,7 +8,7 @@ class InfoTotalView extends View<String> {
 protected template(model: string): string {
     return `
         <small class="info-moeda">(BRL)</small>
-        R$${model}
+        ${model}
     `;
 };
 
