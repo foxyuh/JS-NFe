@@ -12,11 +12,5 @@ EventEmitter.on('Info-Itens', model => {
         return valorAcumulado
     }, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
-    function realToDolar(num){
-        num = num.replace('.', '');
-        num = num.replace(',', '.');
-        return Number(num)
-    }
-
     infoItensView.update(modelo) 
 })
