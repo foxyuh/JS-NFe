@@ -37,10 +37,10 @@ class CheckoutController {
     };
 
     init () {
-        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', '1', '4.399,90', 'assets/imgs/ps5.png');
-        this.produtos.adiciona(produto)
-        this.produtos.adiciona(produto)
-        this.produtos.adiciona(produto)
+        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', 'assets/imgs/ps5.png', 500);
+        this.produtos.adiciona(produto, this.produtos)
+        this.produtos.adiciona(produto, this.produtos)
+        this.produtos.adiciona(produto, this.produtos)
 
         this.atualizaInformacoes('20,10', this.produtos)
         //
@@ -95,5 +95,6 @@ class CheckoutController {
         EventEmitter.emit('Info-Total', [envio, produtos])
 
     }
+
 
 };
