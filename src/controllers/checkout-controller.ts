@@ -7,6 +7,7 @@ import { InfoTotalView } from "../views/info-total-view.js";
 import { Produto } from "../models/produto.js";
 import { Produtos } from "../models/produtos.js";
 import { ProdutosView } from "../views/produtos-view.js";
+import { EventEmitter } from "../utils/event-emitter.js";
 
 export { CheckoutController };
 
@@ -43,12 +44,15 @@ class CheckoutController {
         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', '1', '4.399,90', 'assets/imgs/ps5.png');
         this.produtos.adiciona(produto)
         this.produtos.adiciona(produto)
-        this.produtos.adiciona(produto)
+        // this.produtos.adiciona(produto)
+
+        EventEmitter.emit('SomarTotal', ['20,10', this.produtos])
+        
         this.produtosView.update(this.produtos)
         this.infoItensView.update(this.produtos)
-        // this.infoTotalView.update(this.produtos)
         this.atualizaMetodoDeEntrega('20,10') // Valor Inicial do Envio
         console.log(this.produtos.getProdutos)
+        // this.infoTotalView.update(this.produtos)
         // this.infoItensView.update('4.423,00')
         // this.infoEnvioView.update('33,00')
         // this.infoTotalView.update('4.423,00')
