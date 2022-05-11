@@ -34,7 +34,7 @@ class CheckoutController {
 
     init () {
 
-        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', 'assets/imgs/ps5.png', 500);
+        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', '../src/assets/imgs/ps5.png', 500);
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
