@@ -5,6 +5,8 @@ import { Convert } from "./utils/convert.js";
 
 const checkoutController = new CheckoutController();
 
+console.log(Convert.realToDolar('22,33').toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
+
 document.querySelector('#input-quantidade').addEventListener('input', function(event) {
 
     const evento: any = event.target
