@@ -23,12 +23,10 @@ class CheckoutController {
 
     metodoDeEntrega = []
     informacoes = new Informacoes();
-
     produtos = new Produtos()
 
 
     constructor() {
-
         this.init();
     };
 
