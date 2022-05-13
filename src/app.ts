@@ -4,9 +4,15 @@ import { CheckoutController } from "./controllers/checkout-controller.js";
 
 const checkoutController = new CheckoutController();
 
-document.querySelector('#continuar').addEventListener('click', function () {
+let steps = 1;
+
+document.querySelectorAll('.form').forEach(element =>
+    element.addEventListener('submit', function (event) {
+    window.scrollTo(0, 0);
+    event.preventDefault();
     checkoutController.adiciona();
-});
+    steps = 2;
+}));
 
 document.querySelector('.tabela').addEventListener('change', function (event) {
     const evento: any = event.target

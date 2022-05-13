@@ -61,104 +61,107 @@
                         Entrega
                     </h2>
 
-                    <div class="input-flex-column">
-                        <input type="text" class="input input-max-size" name="" id="email" placeholder="Email">
-                        <div class="input-flex-row">
-                            <input type="text" class="input" name="" id="nome" placeholder="Primeiro Nome">
-                            <input type="text" class="input" name="" id="sobrenome" placeholder="Segundo Nome">
-                        </div>
-                        <input type="text" class="input input-max-size" name="" id="endereco" placeholder="Endereço">
-                        <div class="input-flex-row">
-                            <div class="input-flex-column">
-                                <input type="text" class="input" name="" id="endereco2" placeholder="Endereço 2 (Opcional)">
-                                <input type="text" class="input" name="" id="codigo-postal" placeholder="Código Postal">
-                                <input type="text" class="input" name="" id="cidade" placeholder="Cidade">
+                    <form action="" name="form" class="form">
+                        <div class="input-flex-column">
+                            <input type="text" class="input input-max-size" name="" id="email" placeholder="Email">
+                            <div class="input-flex-row">
+                                <input type="text" class="input" name="" id="nome" placeholder="Primeiro Nome">
+                                <input type="text" class="input" name="" id="sobrenome" placeholder="Segundo Nome">
                             </div>
-                            <div class="input-flex-column">
-                                <input type="text" class="input" name="" id="complemento" placeholder="Complemento (Opcional)">
-                                <input type="text" class="input" name="" id="telefone" placeholder="Telefone">
-                                <input type="text" class="input" name="" id="estado" placeholder="Estado">
+                            <input type="text" class="input input-max-size" name="" id="endereco" placeholder="Endereço">
+                            <div class="input-flex-row">
+                                <div class="input-flex-column">
+                                    <input type="text" class="input" name="" id="endereco2" placeholder="Endereço 2 (Opcional)">
+                                    <input type="text" class="input" name="" id="codigo-postal" placeholder="Código Postal">
+                                    <input type="text" class="input" name="" id="cidade" placeholder="Cidade">
+                                </div>
+                                <div class="input-flex-column">
+                                    <input type="text" class="input" name="" id="complemento" placeholder="Complemento (Opcional)">
+                                    <input type="text" class="input" name="" id="telefone" placeholder="Telefone">
+                                    <input type="text" class="input" name="" id="estado" placeholder="Estado">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <table class="tabela">
-                        <thead>
-                            <tr class="tr-thead">
-                                <th class="th th-metodo-de-entrega">Método de Entrega</th>
-                                <th class="th">Tempo Estimado</th>
-                                <th class="th">Custo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="tr-tbody tr-activate">
-                                <td class="td td-flex-row">
-                                    <input type="radio" class="radio-tabela" name="radio-tabela" id="postal" checked>
-                                        <label for="postal" class="td-flex-column">
-                                            <p class="p-tipo-de-entrega">Postal</p>
-                                            <p>taxas de importação cobradas na <br>entrega</p>
-                                        </label>
-                                </td>
-                                <td class="td td-dias">
-                                    4-6 semanas
-                                </td>
-                                <td class="td td-valor">
-                                    (BRL) R$<span class="number">20,10</span>
-                                </td>
-                            </tr>
-                            <tr class="tr-tbody">
-                                <td class="td td-flex-row">
-                                    <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
-                                        <label for="postal" class="td-flex-column">
-                                            <p class="p-tipo-de-entrega">Standard</p>
-                                            <p>sem taxas de importação adicionais na <br>entrega</p>
-                                        </label>
-                                </td>
-                                <td class="td td-dias">
-                                    8-16 dias úteis
-                                </td>
-                                <td class="td td-valor">
-                                    (BRL) R$<span class="number">28,50</span>
-                                </td>
-                            </tr>
-                            <tr class="tr-tbody">
-                                <td class="td td-flex-row">
-                                    <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
-                                        <label for="postal" class="td-flex-column">
-                                            <p class="p-tipo-de-entrega">Express</p>
-                                            <p>sem taxas de importação adicionais na <br>entrega</p>
-                                        </label>
-                                </td>
-                                <td class="td td-dias">
-                                    9-14 dias úteis
-                                </td>
-                                <td class="td td-valor">
-                                    (BRL) R$<span class="number">31,20</span>
-                                </td>
-                            </tr>
-                            <tr class="tr-tbody">
-                                <td class="td td-flex-row">
-                                    <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
-                                        <label for="postal" class="td-flex-column">
-                                            <p class="p-tipo-de-entrega">Express</p>
-                                            <p>taxas de importação cobradas na <br>entrega</p>
-                                        </label>
-                                </td>
-                                <td class="td td-dias">
-                                    9-14 dias úteis
-                                </td>
-                                <td class="td td-valor">
-                                    (BRL) R$<span class="number">25,50</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <button class="botao botao-checkout">
-                        Continuar
-                        <span class="material-icons">
-                            navigate_next
-                        </span>
-                    </button>
+                    </form>
+                        <table class="tabela">
+                            <thead>
+                                <tr class="tr-thead">
+                                    <th class="th th-metodo-de-entrega">Método de Entrega</th>
+                                    <th class="th">Tempo Estimado</th>
+                                    <th class="th">Custo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-tbody tr-activate">
+                                    <td class="td td-flex-row">
+                                        <input type="radio" class="radio-tabela" name="radio-tabela" id="postal" checked>
+                                            <label for="postal" class="td-flex-column">
+                                                <p class="p-tipo-de-entrega">Postal</p>
+                                                <p>taxas de importação cobradas na <br>entrega</p>
+                                            </label>
+                                    </td>
+                                    <td class="td td-dias">
+                                        4-6 semanas
+                                    </td>
+                                    <td class="td td-valor">
+                                        (BRL) R$<span class="number">20,10</span>
+                                    </td>
+                                </tr>
+                                <tr class="tr-tbody">
+                                    <td class="td td-flex-row">
+                                        <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                            <label for="postal" class="td-flex-column">
+                                                <p class="p-tipo-de-entrega">Standard</p>
+                                                <p>sem taxas de importação adicionais na <br>entrega</p>
+                                            </label>
+                                    </td>
+                                    <td class="td td-dias">
+                                        8-16 dias úteis
+                                    </td>
+                                    <td class="td td-valor">
+                                        (BRL) R$<span class="number">28,50</span>
+                                    </td>
+                                </tr>
+                                <tr class="tr-tbody">
+                                    <td class="td td-flex-row">
+                                        <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                            <label for="postal" class="td-flex-column">
+                                                <p class="p-tipo-de-entrega">Express</p>
+                                                <p>sem taxas de importação adicionais na <br>entrega</p>
+                                            </label>
+                                    </td>
+                                    <td class="td td-dias">
+                                        9-14 dias úteis
+                                    </td>
+                                    <td class="td td-valor">
+                                        (BRL) R$<span class="number">31,20</span>
+                                    </td>
+                                </tr>
+                                <tr class="tr-tbody">
+                                    <td class="td td-flex-row">
+                                        <input type="radio" class="radio-tabela" name="radio-tabela" id="postal">
+                                            <label for="postal" class="td-flex-column">
+                                                <p class="p-tipo-de-entrega">Express</p>
+                                                <p>taxas de importação cobradas na <br>entrega</p>
+                                            </label>
+                                    </td>
+                                    <td class="td td-dias">
+                                        9-14 dias úteis
+                                    </td>
+                                    <td class="td td-valor">
+                                        (BRL) R$<span class="number">25,50</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form action="" name="form" class="form">
+                            <button class="botao botao-checkout">
+                                Continuar
+                                <span class="material-icons">
+                                    navigate_next
+                                </span>
+                            </button>
+                        </form>
 
                     <h2 class="sub-titulo-checkout sub-titulo-checkout-activate">
                         <!-- sub-titulo-checkout-pagamento -->
@@ -171,38 +174,39 @@
 
                 <article class="pagamento display-none">
                     <h2 class="sub-titulo-checkout">
-                        <!-- sub-titulo-checkout-pagamento -->
                         <span class="material-icons md-black">
                             looks_two
                         </span>
                         Pagamento
                     </h2>
 
-                    <div class="input-flex-column">
-                        <div>
-                            <h3 class="titulo-input">Informações do cartão</h3>
-                            <input type="text" name="" id="" class="input input-max-size" placeholder="1234-1234-1234-1234">
-                            <div class="input-flex-row input-flex-row-cartao">
-                                <input type="text" name="" id="" class="input" placeholder="MM/AA">
-                                <input type="text" name="" id="" class="input" placeholder="CVC">
+                    <form action="" name="form" class="form">
+                        <div class="input-flex-column">
+                            <div>
+                                <h3 class="titulo-input">Informações do cartão</h3>
+                                <input type="text" name="" id="" class="input input-max-size input-cartao" placeholder="1234-1234-1234-1234">
+                                <div class="input-flex-row input-flex-row-cartao">
+                                    <input type="text" name="" id="" class="input" placeholder="MM/AA">
+                                    <input type="text" name="" id="" class="input input-cvc" placeholder="CVC">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="titulo-input">Nome no cartão</h3>
+                                <input type="text" name="" id="" class="input input-max-size" placeholder="Ex; Maria da Silva">
+                            </div>
+                            <div>
+                                <h3 class="titulo-input">País</h3>
+                                <input type="text" name="" id="" class="input input-max-size" placeholder="Ex; Brasil" value="Brasil">
                             </div>
                         </div>
-                        <div>
-                            <h3 class="titulo-input">Nome no cartão</h3>
-                            <input type="text" name="" id="" class="input input-max-size" placeholder="Ex; Maria da Silva">
-                        </div>
-                        <div>
-                            <h3 class="titulo-input">País</h3>
-                            <input type="text" name="" id="" class="input input-max-size" placeholder="Ex; Brasil" value="Brasil">
-                        </div>
-                    </div>
 
-                    <button class="botao botao-checkout">
-                        Continuar
-                        <span class="material-icons">
-                            navigate_next
-                        </span>
-                    </button>
+                            <button class="botao botao-checkout">
+                                Continuar
+                                <span class="material-icons">
+                                    navigate_next
+                                </span>
+                            </button>
+                        </form>
                     
                     <h2 class="sub-titulo-checkout sub-titulo-checkout-activate" >
                         <span class="material-icons md-black">
@@ -229,12 +233,14 @@
                     </span>
                     Seu Pedido
                 </h1>
-                <button id="continuar" class="botao">
-                    Continuar
-                    <span class="material-icons">
-                        navigate_next
-                    </span>
-                </button>
+                <form action="" name="form" class="form">
+                    <button id="continuar" class="botao">
+                        Continuar
+                        <span class="material-icons">
+                            navigate_next
+                        </span>
+                    </button>
+                </form>
                 <p class="info-txt info-itens-txt">
                     Itens
                     <span class="info-itens" id="info-itens">
