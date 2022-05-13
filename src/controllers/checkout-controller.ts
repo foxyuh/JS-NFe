@@ -42,6 +42,9 @@ class CheckoutController {
 
     adiciona() {
 
+        document.querySelector('.entrega').classList.add('display-none')
+        document.querySelector('.pagamento').classList.remove('display-none')
+
         const entrega = new Entrega(this.email, this.nome, this.sobrenome, this.endereço, this.endereço2, this.complemento, this.codigoPostal, this.telefone, this.cidade, this.estado);
         this.pegaMetodoDeEntrega();
         const metodoDeEntrega = new MetodoDeEntrega(this.metodoDeEntrega);
