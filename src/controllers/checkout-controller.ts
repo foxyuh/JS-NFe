@@ -21,9 +21,10 @@ class CheckoutController {
     cidade = this.$('#cidade')
     estado = this.$('#estado')
 
-    metodoDeEntrega = []
     informacoes = new Informacoes();
     produtos = new Produtos()
+    valorEntrega = '20,10';
+    metodoDeEntrega = []
 
 
     constructor() {
@@ -36,8 +37,7 @@ class CheckoutController {
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
         this.produtos.adiciona(produto, this.produtos)
-
-        this.atualizaInformacoes('20,10', this.produtos)
+        this.atualizaInformacoes(this.valorEntrega, this.produtos)
     };
 
     adiciona() {
@@ -72,6 +72,20 @@ class CheckoutController {
             });
         });
     };
+
+
+    setQuantidadeEValor(refName, quantidade, valor) {
+
+        const array = this.produtos.getProdutos.filter(element => element.nome === refName)
+        array.forEach(item => {
+            item.preco = valor
+            item.quantidade = quantidade
+        })
+        
+        console.log(this.valorEntrega, this.produtos)
+        this.atualizaInformacoes(this.valorEntrega, this.produtos)
+
+    }
 
     atualizaInformacoes(envio, produtos) {
 

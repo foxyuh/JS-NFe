@@ -1,8 +1,24 @@
 import { EventEmitter } from "./utils/event-emitter.js";
 import { CheckoutController } from "./controllers/checkout-controller.js";
+import { Convert } from "./utils/convert.js";
 
 
 const checkoutController = new CheckoutController();
+
+document.querySelector('#input-quantidade').addEventListener('input', function(event) {
+
+    const evento: any = event.target
+    const parent = evento.parentNode.parentNode
+    const productName = parent.querySelector('.item-info-nome').innerText
+
+        const ArrayDeProdutos = checkoutController.produtos.getProdutos
+        const preco = ArrayDeProdutos.map(order => order.getPreco).join('')
+        const valorSomado = this.value * Convert.realToDolar(preco)
+        checkoutController.setQuantidadeEValor(productName, this.value, valorSomado)
+        console.log(valorSomado)
+
+    // checkoutController.atualizaInformacoes()
+})
 
 let steps = 1;
 
@@ -15,10 +31,6 @@ document.querySelectorAll('.form').forEach(element =>
 }));
 
 document.querySelector('.tabela').addEventListener('change', function (event) {
-    const evento: any = event.target
-})
-
-document.querySelector('.tabela').addEventListener('change', function (event) {
 
     const evento: any = event.target;
 
@@ -26,9 +38,12 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
         const parent = evento.parentNode.parentNode;
         const envio = parent.querySelector('.number').innerText;
         const produtos = checkoutController.produtos
+        
+        console.log(checkoutController.valorEntrega = envio)
+        console.log(envio, produtos)
         checkoutController.atualizaInformacoes(envio, produtos);
         styleEvent()
-        console.log([envio, produtos])
+        // console.log([envio, produtos])
     };
 
     function styleEvent() {

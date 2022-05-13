@@ -6,7 +6,7 @@ class Produto {
     readonly cor;
     readonly tamanho;
     public quantidade;
-    readonly preco;
+    public preco;
     readonly img;
     readonly productId;
 
@@ -18,6 +18,10 @@ class Produto {
         this.preco = preco
         this.img = img
         this.productId = productId
+    }
+
+    get getPreco() {
+        return this.preco
     }
     
 

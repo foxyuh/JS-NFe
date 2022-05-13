@@ -1,14 +1,19 @@
+
+
 export { Produtos };
 
-class Produtos {
 
-    private readonly produtos = [];
+class Produtos {
+    
+    private produtos = [];
 
     adiciona(produto, produtos: any): void {
 
         this.findOrderByProductId(produto, produtos)
 
     };
+
+
 
     findOrderByProductId(produto, ArrayDeProdutos) {
         const produtos: any = ArrayDeProdutos.getProdutos
