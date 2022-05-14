@@ -379,3 +379,69 @@ body {
     border: #489CCE solid 1px;
 
 }
+
+.selectdiv {
+  /*Don't really need this just for demo styling*/
+  display: inline-block;
+  width: 100%;
+
+}
+
+.selectdiv:after {
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+  
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+  
+  position: absolute;
+  pointer-events: none;
+  border-style: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  padding: 0px 16px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #489CCE;
+
+  background-color: #F4F4F4;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+  border: none;
+}
+
+option {
+    color: #333;
+}
+
+.valor-promocional {
+    padding-left: 50px;
+    color: #333;
+}
+
+.selectdiv
+select:focus {
+    background-color: #FFFFFF;
+    color: #333;
+}
