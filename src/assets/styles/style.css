@@ -393,6 +393,11 @@ option {
     color: #333;
 }
 
+.selectdiv select:hover {
+    cursor: pointer;
+    color: #357498;
+}
+
 .selectdiv select:focus {
     background-color: #FFFFFF;
     color: #333;
