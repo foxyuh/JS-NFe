@@ -21,14 +21,13 @@ class CheckoutController {
     cidade = this.$('#cidade')
     estado = this.$('#estado')
 
-    metodoDeEntrega = []
     informacoes = new Informacoes();
-
     produtos = new Produtos()
+    valorEntrega = '20,10';
+    metodoDeEntrega = []
 
 
     constructor() {
-
         this.init();
     };
 
@@ -36,13 +35,13 @@ class CheckoutController {
 
         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', '../src/assets/imgs/ps5.png', 500);
         this.produtos.adiciona(produto, this.produtos)
-        this.produtos.adiciona(produto, this.produtos)
-        this.produtos.adiciona(produto, this.produtos)
-
-        this.atualizaInformacoes('20,10', this.produtos)
+        this.atualizaInformacoes(this.valorEntrega, this.produtos)
     };
 
     adiciona() {
+
+        document.querySelector('.entrega').classList.add('display-none')
+        document.querySelector('.pagamento').classList.remove('display-none')
 
         const entrega = new Entrega(this.email, this.nome, this.sobrenome, this.endereço, this.endereço2, this.complemento, this.codigoPostal, this.telefone, this.cidade, this.estado);
         this.pegaMetodoDeEntrega();
@@ -71,6 +70,20 @@ class CheckoutController {
             });
         });
     };
+
+
+    setQuantidadeEValor(refName, quantidade, valor) {
+
+        const array = this.produtos.getProdutos.filter(element => element.nome === refName)
+        array.forEach(item => {
+            item.preco = valor
+            item.quantidade = quantidade
+        })
+        
+        console.log(this.valorEntrega, this.produtos)
+        this.atualizaInformacoes(this.valorEntrega, this.produtos)
+
+    }
 
     atualizaInformacoes(envio, produtos) {
 

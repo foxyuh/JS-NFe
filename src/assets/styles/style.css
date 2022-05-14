@@ -32,6 +32,10 @@ body {
     padding-right: 16px;
 }
 
+.display-none {
+    display: none;
+}
+
 .div-main {
 
     display: flex;
@@ -88,6 +92,14 @@ body {
     text-decoration: none;
 }
 
+.titulo-input {
+
+    font-weight: 400;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 .sub-titulo-checkout {
 
     display: flex;
@@ -103,7 +115,7 @@ body {
     padding-bottom: 15px;
 }
 
-.sub-titulo-checkout-pagamento {
+.sub-titulo-checkout-activate {
     border-bottom: rgb(61, 61, 61, 0.5) solid 1px;
 }
 
@@ -117,6 +129,20 @@ body {
     border: #C8C8C8 solid 1px;
     border-radius: 2px;
     padding-left: 8px;
+}
+
+.input-cartao {
+    background-image: url(../imgs/card-icons.png);
+    background-size: 160px;
+    background-repeat: no-repeat;
+    background-position: center right 2%;
+}
+
+.input-cvc {
+    background-image: url(../imgs/cvc-icon.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center right 2%;
 }
 
 .input::placeholder {
@@ -143,6 +169,10 @@ body {
 
     gap: 1%;
     width: 100%;
+}
+
+.input-flex-row-cartao {
+    padding-top: 4px;
 }
 
 .section-info {
