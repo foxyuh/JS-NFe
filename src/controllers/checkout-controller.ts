@@ -1,5 +1,5 @@
 import { Entrega } from "../models/entrega.js";
-import { Informacoes } from "../models/informacoes.js";
+import { PedidoLog } from "../models/pedido-log.js";
 import { MetodoDeEntrega } from "../models/metodo-de-entrega.js";
 import { Produto } from "../models/produto.js";
 import { Produtos } from "../models/produtos.js";
@@ -21,7 +21,7 @@ class CheckoutController {
     cidade = this.$('#cidade')
     estado = this.$('#estado')
 
-    informacoes = new Informacoes();
+    pedidoLog = new PedidoLog();
     produtos = new Produtos()
     valorEntrega = '20,10';
     metodoDeEntrega = []
@@ -66,7 +66,7 @@ class CheckoutController {
         this.pegaMetodoDeEntrega();
         const metodoDeEntrega = new MetodoDeEntrega(this.metodoDeEntrega);
 
-        this.informacoes.adiciona(entrega, metodoDeEntrega);
+        this.pedidoLog.adiciona(entrega, metodoDeEntrega);
     };
 
     pegaMetodoDeEntrega() {

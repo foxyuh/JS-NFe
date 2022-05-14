@@ -6,7 +6,6 @@ const infoTotalView = new InfoTotalView('#info-total');
 
 EventEmitter.on('Info-Total', value => {
 
-
     const valorEnvio = Convert.realToDolar(value[0])
     const produtos = value[1]
     const valorPromocional = Convert.realToDolar(String(value[2]))
