@@ -9,7 +9,6 @@ class ProdutosView extends View<Produtos> {
 protected template(model: Produtos): string {
     return `
     ${model.getProdutos.map(element => {
-        const inputQuantidade: HTMLInputElement = document.querySelector('#input-quantidade')
 
         return `
         <li class="produto-selecionado">
@@ -29,7 +28,7 @@ protected template(model: Produtos): string {
             </div>
         </li>
         `
-    })}
+    }).join('')}
     `;
 };
 

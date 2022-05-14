@@ -43,7 +43,7 @@ body {
 
     height: 160vh;
 
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .section-pagamento {
@@ -265,7 +265,7 @@ body {
 .produto-selecionado {
 
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 2.5em;
 
     display: flex;
     justify-content: flex-start;
@@ -366,7 +366,7 @@ body {
     font-size: 14px;
     text-align: center;
 
-    margin-top: 40px;
+    margin-top: 28px;
     margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;

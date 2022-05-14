@@ -19,7 +19,7 @@ class Produtos {
         if(!produtos.find(order => order.productId === productId)) {
             this.produtos.push(produto);
         } else {
-            this.produtos.splice(produto)
+            return
             // idéia futura: tratar erro de quando tentão adicionar o mesmo produto, fazer um aviso na tela e avisando que o usúario pode adicionar uma quantidade diretamente no produto da lista.
         }
         

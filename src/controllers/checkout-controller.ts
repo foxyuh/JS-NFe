@@ -50,7 +50,7 @@ class CheckoutController {
                 2, 
                 '479,90', 
                 '../src/assets/imgs/pulse3d.png', 
-                501
+                437
                 ), this.produtos)
 
                 console.log(this.produtos)
