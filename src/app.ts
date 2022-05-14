@@ -6,22 +6,6 @@ import { Convert } from "./utils/convert.js";
 const checkoutController = new CheckoutController();
 
 console.log(Convert.realToDolar('22,33').toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
-    
-
-// document.querySelector('#input-quantidade').addEventListener('input', function(event) {
-
-//     const evento: any = event.target
-//     const parent = evento.parentNode.parentNode
-//     const productName = parent.querySelector('.item-info-nome').innerText
-
-//         const ArrayDeProdutos = checkoutController.produtos.getProdutos
-//         const preco = ArrayDeProdutos.map(order => order.getPreco).join('')
-//         const valorSomado = this.value * Convert.realToDolar(preco)
-//         checkoutController.setQuantidadeEValor(productName, this.value, valorSomado)
-//         console.log(valorSomado)
-
-//     // checkoutController.atualizaInformacoes()
-// })
 
 let steps = 1;
 
@@ -46,7 +30,6 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
         console.log(envio, produtos)
         checkoutController.atualizaInformacoes(envio, produtos);
         styleEvent()
-        // console.log([envio, produtos])
     };
 
     function styleEvent() {

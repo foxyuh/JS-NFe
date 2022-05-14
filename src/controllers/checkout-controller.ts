@@ -90,22 +90,6 @@ class CheckoutController {
         });
     };
 
-
-    // setQuantidadeEValor(refName, quantidade, valor) {
-
-    //     let array = this.produtos.getProdutos
-    //     .find(element => element.nome === refName)
-    //     const newArray = array.forEach(item => {
-    //         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', `${parseInt(quantidade)}`, `${item.preco}`, '../src/assets/imgs/ps5.png', 500)
-            
-    //     })
-    //     this.produtos.adiciona(newArray, this.produtos)
-        
-    //     console.log(this.valorEntrega, this.produtos)
-    //     this.atualizaInformacoes(this.valorEntrega, this.produtos)
-
-    // }
-
     atualizaInformacoes(envio, produtos) {
 
         EventEmitter.emit('Exibe-Produtos', produtos)
