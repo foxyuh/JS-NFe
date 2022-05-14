@@ -20,14 +20,12 @@
 .material-icons.md-black { color: rgb(0, 0, 0, 0.9) }
 
 body {
-
     font-family: 'ITC-Franklin-Gothic', sans-serif;
     color: rgb(44, 44, 44, 0.9);
     box-sizing: border-box;
 }
 
 .container {
-
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -37,7 +35,6 @@ body {
 }
 
 .div-main {
-
     display: flex;
     justify-content: center;
 
@@ -47,7 +44,6 @@ body {
 }
 
 .section-pagamento {
-    
     width: 720px;
     height: 570px;
 
@@ -57,7 +53,6 @@ body {
 }
 
 .titulo-checkout {
-
     display: flex;
     align-items: flex-end;
 
@@ -69,14 +64,12 @@ body {
 }
 
 .small {
-
     opacity: 90%;
     padding-bottom: 2px;
     font-size: 16px;
 }
 
 .login-txt {
-
     display: flex;
     align-items: center;
 
@@ -87,13 +80,11 @@ body {
 }
 
 .login {
-
     color: #489CCE;
     text-decoration: none;
 }
 
 .titulo-input {
-
     font-weight: 400;
 
     margin-top: 8px;
@@ -101,7 +92,6 @@ body {
 }
 
 .sub-titulo-checkout {
-
     display: flex;
     align-items: center;
 
@@ -121,7 +111,6 @@ body {
 
 
 .input {
-
     min-width: 330px;
     height: 38px;
 
@@ -154,7 +143,6 @@ body {
 }
 
 .input-flex-column {
-
     display: flex;
     flex-direction: column;
 
@@ -162,7 +150,6 @@ body {
 }
 
 .input-flex-row {
-
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -176,7 +163,6 @@ body {
 }
 
 .section-info {
-
     width: 320px;
     height: 160vh;
 
@@ -188,7 +174,6 @@ body {
 }
 
 .titulo-pedido {
-
     display: flex;
     align-items: center;
 
@@ -200,7 +185,6 @@ body {
 }
 
 .botao {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,10 +201,18 @@ body {
     color: #D3D3D3;
 
     background-color: #3D3D3D;
+
+    transition: all 300ms;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: #2d2c2c;
+    font-size: 1.04em;
+    transition: all 300ms;
 }
 
 .info-txt {
-
     display: flex;
     justify-content: space-between;
 
@@ -231,7 +223,6 @@ body {
 }
 
 .info-txt-with-help {
-
     display: flex;
     justify-content: left;
     align-items: stretch;
@@ -247,7 +238,6 @@ body {
 }
 
 .codigo-promocional {
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -263,7 +253,6 @@ body {
 }
 
 .produto-selecionado {
-
     margin-top: 15px;
     margin-bottom: 2.5em;
 
@@ -273,31 +262,26 @@ body {
 }
 
 .item-info {
-
     padding-top: 4px;
     padding-left: 4px;
 }
 
 .item-info-valor {
-
     font-weight: bold;
     padding-top: 12px;
 }
 
 .img-produto {
-
     width: 120px;
     height: 110px;
 }
 
 .tabela {
-
     width: 100%;
     margin-top: 30px;
 }
 
 .tr-thead {
-
     font-size: 14px;
     text-align: left;
     font-weight: bold;
@@ -306,7 +290,6 @@ body {
 }
 
 .th {
-
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -317,13 +300,11 @@ body {
 }
 
 .td {
-
     padding-top: 16px;
     padding-bottom: 16px;
 }
 
 .td-flex-column {
-
     display: flex;
     flex-direction: column;
 
@@ -331,7 +312,6 @@ body {
 }
 
 .td-flex-row {
-
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -344,7 +324,6 @@ body {
 }
 
 .radio-tabela {
-
     height: 16px;
     width: 16px;
 }
@@ -360,7 +339,6 @@ body {
 }
 
 .footer {
-
     width: 600px;
 
     font-size: 14px;
@@ -372,18 +350,15 @@ body {
     margin-left: auto;
 
     opacity: 60%;
-  
 }
 
 .tr-activate {
     border: #489CCE solid 1px;
-
 }
 
 .selectdiv {
   display: inline-block;
   width: 100%;
-
 }
 
 .selectdiv select {
@@ -412,8 +387,7 @@ option {
     color: #333;
 }
 
-.selectdiv
-select:focus {
+.selectdiv select:focus {
     background-color: #FFFFFF;
     color: #333;
 }
