@@ -381,7 +381,6 @@ body {
 }
 
 .selectdiv {
-  /*Don't really need this just for demo styling*/
   display: inline-block;
   width: 100%;
 
@@ -391,7 +390,6 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Add some styling */
   
   display: block;
   width: 100%;
@@ -411,11 +409,6 @@ body {
 }
 
 option {
-    color: #333;
-}
-
-.valor-promocional {
-    padding-left: 50px;
     color: #333;
 }
 
