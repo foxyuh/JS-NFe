@@ -7,16 +7,19 @@ const infoTotalView = new InfoTotalView('#info-total');
 EventEmitter.on('Info-Total', value => {
 
 
-    const envio = Convert.realToDolar(value[0])
+    const valorEnvio = Convert.realToDolar(value[0])
     const produtos = value[1]
+    const valorPromocional = Convert.realToDolar(String(value[2]))
+    console.log(valorPromocional)
     
     const somaDosPrecos = produtos.getProdutos.reduce((valorAcumulado, numeroAtual) => {
-        const valor = Convert.realToDolar(numeroAtual.preco)
+        
+        const valor = numeroAtual.quantidade * Convert.realToDolar(numeroAtual.preco)
         valorAcumulado = valorAcumulado + valor
         return valorAcumulado
     }, 0)
 
-    const total = envio + somaDosPrecos
+    const total = valorEnvio + (somaDosPrecos - valorPromocional)
     infoTotalView.update(total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
     
 })

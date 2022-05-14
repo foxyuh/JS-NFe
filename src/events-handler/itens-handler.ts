@@ -7,7 +7,8 @@ const infoItensView = new InfoItensView('#info-itens');
 EventEmitter.on('Info-Itens', model => { 
 
     const modelo = model.getProdutos.reduce((valorAcumulado, numeroAtual) => {
-        const valor = Convert.realToDolar(numeroAtual.preco)
+        
+        const valor = numeroAtual.quantidade * Convert.realToDolar(numeroAtual.preco)
         valorAcumulado = valorAcumulado + valor
         return valorAcumulado
     }, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})

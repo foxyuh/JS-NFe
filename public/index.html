@@ -14,8 +14,8 @@
 
 </head>
 <body class="body">
-    <header>
 
+    <header>
     </header>
 
     <main class="main">
@@ -37,22 +37,8 @@
                         help
                     </span>
                 </p>
-                <!-- <div>
-                    <button type="button" name="dropdown-linguagem">Português</button>
-                    <div class="dropdown-linguagem-content">
-                        <button type="button" name="liguagem-ingles">Inglês</button>
-                    </div>
-                </div> -->
-                <!-- <div>
-                    <button type="button" name="dropdown-pagamento">Paypal</button>
-                    <div class="dropdown-pagamento-content">
-                        <button type="button" name="dropdown-pagemento-boleto">Boleto</button>
-                        <button type="button" name="dropdown-pagemento-cartao">Cartão de Crédito</button>
-                        <button type="button" name="dropdown-pagemento-paypal">Paypal</button>
-                    </div>
-                </div> -->
 
-                <article class="entrega"> <!-- XXXXXXXXXXXXXXXXXXXXXXX -->
+                <article class="entrega">
 
                     <h2 class="sub-titulo-checkout">
                         <span class="material-icons md-black">
@@ -101,7 +87,7 @@
                                             </label>
                                     </td>
                                     <td class="td td-dias">
-                                        4-6 semanas
+                                        <span class="dias">4-6</span> semanas
                                     </td>
                                     <td class="td td-valor">
                                         (BRL) R$<span class="number">20,10</span>
@@ -116,7 +102,7 @@
                                             </label>
                                     </td>
                                     <td class="td td-dias">
-                                        8-16 dias úteis
+                                        <span class="dias">8-16</span> dias úteis
                                     </td>
                                     <td class="td td-valor">
                                         (BRL) R$<span class="number">28,50</span>
@@ -131,7 +117,7 @@
                                             </label>
                                     </td>
                                     <td class="td td-dias">
-                                        9-14 dias úteis
+                                        <span class="dias">9-14</span> dias úteis
                                     </td>
                                     <td class="td td-valor">
                                         (BRL) R$<span class="number">31,20</span>
@@ -146,7 +132,7 @@
                                             </label>
                                     </td>
                                     <td class="td td-dias">
-                                        9-14 dias úteis
+                                        <span class="dias">9-14</span> dias úteis
                                     </td>
                                     <td class="td td-valor">
                                         (BRL) R$<span class="number">25,50</span>
@@ -164,7 +150,6 @@
                         </form>
 
                     <h2 class="sub-titulo-checkout sub-titulo-checkout-activate">
-                        <!-- sub-titulo-checkout-pagamento -->
                         <span class="material-icons md-gray">
                             looks_two
                         </span>
@@ -184,7 +169,7 @@
                         <div class="input-flex-column">
                             <div>
                                 <h3 class="titulo-input">Informações do cartão</h3>
-                                <input type="text" name="" id="" class="input input-max-size input-cartao" placeholder="1234-1234-1234-1234">
+                                <input type="text" name="" id="" class="input input-max-size input-cartao" placeholder="1234-1234-1234-1234" maxlength="16">
                                 <div class="input-flex-row input-flex-row-cartao">
                                     <input type="text" name="" id="" class="input" placeholder="MM/AA">
                                     <input type="text" name="" id="" class="input input-cvc" placeholder="CVC">
@@ -279,52 +264,29 @@
                         R$ 0,0
                     </p>
                 </h2>
+
+                <hr style="border-color: #c8c8c83c; margin-top: 8px; margin-bottom: 1px;">
     
-                <p class="codigo-promocional">+ Código Promocional</p>
+                    <div class="selectdiv">
+                            <form action="">
+                                <label>
+                                    <select class="select">
+                                        <option value="0" selected> + Código Promocional </option>
+                                        <option value="3,50">( Código 1 ) | <span class="valor-promocional">R$ 3,50</span></option>
+                                        <option value="17,99">( Código 2 ) | <span class="valor-promocional">R$ 17,99</span></option>
+                                        <option value="7,80">( Código 3 ) | <span class="valor-promocional">R$ 7,80</span></option>
+                                    </select>
+                                </label>
+                            </form>
+                    </div>
+
+                    <hr style="border-color: #c8c8c83c; margin-top: 1px; margin-bottom: 32px;">
+                
     
                 <ul class="lista-de-produtos" id="lista-de-produtos">
-    
-                    <!--  -->
-    
                 </ul>
             </section>
         </div>
-    
-        <!-- <section class="produtos-adicionais">
-            <ul class="" id="">
-                <li class="">
-                    <img src="../src/assets/imgs/ps5.png" class="img-produto" alt="imagem do produto">
-                    <div>
-                        <p class="item-info item-info-nome">Playstation 5</p>
-                        <p class="item-info item-info-valor">R$4.399,90</p>
-                    </div>
-    
-                    <li class="">
-                        <img src="../src/assets/imgs/ps5.png" class="img-produto" alt="imagem do produto">
-                        <div>
-                            <p class="item-info item-info-nome">Playstation 5</p>
-                            <p class="item-info item-info-valor">R$4.399,90</p>
-                        </div>
-                    </li>
-    
-                    <li class="">
-                        <img src="../src/assets/imgs/ps5.png" class="img-produto" alt="imagem do produto">
-                        <div>
-                            <p class="item-info item-info-nome">Playstation 5</p>
-                            <p class="item-info item-info-valor">R$4.399,90</p>
-                        </div>
-                    </li>
-    
-                    <li class="">
-                        <img src="../src/assets/imgs/ps5.png" class="img-produto" alt="imagem do produto">
-                        <div>
-                            <p class="item-info item-info-nome">Playstation 5</p>
-                            <p class="item-info item-info-valor">R$4.399,90</p>
-                        </div>
-                    </li>
-                </li>
-            </ul>
-        </section> -->
     
     </main>
 

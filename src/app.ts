@@ -1,30 +1,27 @@
 import { EventEmitter } from "./utils/event-emitter.js";
 import { CheckoutController } from "./controllers/checkout-controller.js";
-import { Convert } from "./utils/convert.js";
-
 
 const checkoutController = new CheckoutController();
 
-console.log(Convert.realToDolar('22,33').toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
+const $ = document.querySelector.bind(document)
+const $All = document.querySelectorAll.bind(document)
 
-document.querySelector('#input-quantidade').addEventListener('input', function(event) {
+$('.select').addEventListener('change', function(event) {
 
-    const evento: any = event.target
-    const parent = evento.parentNode.parentNode
-    const productName = parent.querySelector('.item-info-nome').innerText
+    const valorPromocional = this.value 
 
-        const ArrayDeProdutos = checkoutController.produtos.getProdutos
-        const preco = ArrayDeProdutos.map(order => order.getPreco).join('')
-        const valorSomado = this.value * Convert.realToDolar(preco)
-        checkoutController.setQuantidadeEValor(productName, this.value, valorSomado)
-        console.log(valorSomado)
+    EventEmitter.emit('Info-Total', [
+        checkoutController.valorEntrega, 
+        checkoutController.produtos, 
+        valorPromocional])
+    // console.log(this.querySelector('option').)
 
-    // checkoutController.atualizaInformacoes()
+    // alert('oi')
 })
 
 let steps = 1;
 
-document.querySelectorAll('.form').forEach(element =>
+$All('.form').forEach(element =>
     element.addEventListener('submit', function (event) {
     window.scrollTo(0, 0);
     event.preventDefault();
@@ -32,7 +29,7 @@ document.querySelectorAll('.form').forEach(element =>
     steps = 2;
 }));
 
-document.querySelector('.tabela').addEventListener('change', function (event) {
+$('.tabela').addEventListener('change', function (event) {
 
     const evento: any = event.target;
 
@@ -45,12 +42,10 @@ document.querySelector('.tabela').addEventListener('change', function (event) {
         console.log(envio, produtos)
         checkoutController.atualizaInformacoes(envio, produtos);
         styleEvent()
-        // console.log([envio, produtos])
     };
 
     function styleEvent() {
-        document
-        .querySelectorAll('.tr-tbody')
+        $All('.tr-tbody')
         .forEach(element => 
             element.classList.remove('tr-activate')
         );

@@ -43,7 +43,7 @@ body {
 
     height: 160vh;
 
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .section-pagamento {
@@ -265,7 +265,7 @@ body {
 .produto-selecionado {
 
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 2.5em;
 
     display: flex;
     justify-content: flex-start;
@@ -366,7 +366,7 @@ body {
     font-size: 14px;
     text-align: center;
 
-    margin-top: 40px;
+    margin-top: 28px;
     margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
@@ -378,4 +378,49 @@ body {
 .tr-activate {
     border: #489CCE solid 1px;
 
+}
+
+.selectdiv {
+  /*Don't really need this just for demo styling*/
+  display: inline-block;
+  width: 100%;
+
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  padding: 0px 16px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #489CCE;
+
+  background-color: #F4F4F4;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+  border: none;
+}
+
+option {
+    color: #333;
+}
+
+.valor-promocional {
+    padding-left: 50px;
+    color: #333;
+}
+
+.selectdiv
+select:focus {
+    background-color: #FFFFFF;
+    color: #333;
 }
