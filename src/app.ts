@@ -10,13 +10,11 @@ $('.select').addEventListener('change', function(event) {
 
     const valorPromocional = this.value 
 
-    EventEmitter.emit('Info-Total', [
+    checkoutController.atualizaInformacoes(
         checkoutController.valorEntrega, 
         checkoutController.produtos, 
-        valorPromocional])
-    // console.log(this.querySelector('option').)
+        valorPromocional)
 
-    // alert('oi')
 })
 
 let steps = 1;
