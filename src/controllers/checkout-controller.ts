@@ -90,12 +90,12 @@ class CheckoutController {
         });
     };
 
-    atualizaInformacoes(envio, produtos) {
+    atualizaInformacoes(envio, produtos, codigo=0) {
 
         EventEmitter.emit('Exibe-Produtos', produtos)
         EventEmitter.emit('Info-Itens', produtos)
         EventEmitter.emit('Info-Envio', envio)
-        EventEmitter.emit('Info-Total', [envio, produtos])
+        EventEmitter.emit('Info-Total', [envio, produtos, codigo])
 
     }
 
