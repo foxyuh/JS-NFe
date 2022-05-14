@@ -33,8 +33,27 @@ class CheckoutController {
 
     init () {
 
-        const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', 1, '4.399,90', '../src/assets/imgs/ps5.png', 500);
-        this.produtos.adiciona(produto, this.produtos)
+        this.produtos.adiciona(new Produto(
+            'Playstation 5', 
+            'Preto/Branco', 
+            '30cm', 
+            1, 
+            '4.399,90', 
+            '../src/assets/imgs/ps5.png', 
+            500
+            ), this.produtos)
+
+            this.produtos.adiciona(new Produto(
+                'Pulse 3D', 
+                'Preto/Branco', 
+                '15cm', 
+                2, 
+                '479,90', 
+                '../src/assets/imgs/pulse3d.png', 
+                501
+                ), this.produtos)
+
+                console.log(this.produtos)
         this.atualizaInformacoes(this.valorEntrega, this.produtos)
     };
 
@@ -61,8 +80,8 @@ class CheckoutController {
                     if ( elemento.checked ) {
                         const elementoParent: HTMLElement = elemento.parentNode.parentNode;
                         const tipoDeEntrega: any = elementoParent.querySelector('.p-tipo-de-entrega');
-                        const dias: any = elementoParent.querySelector('.td-dias');
-                        const valor: any = elementoParent.querySelector('.td-valor');
+                        const dias: any = elementoParent.querySelector('.dias');
+                        const valor: any = elementoParent.querySelector('.number');
     
                         this.metodoDeEntrega = [tipoDeEntrega.innerText, dias.innerText, valor.innerText];
                     };
@@ -72,18 +91,20 @@ class CheckoutController {
     };
 
 
-    setQuantidadeEValor(refName, quantidade, valor) {
+    // setQuantidadeEValor(refName, quantidade, valor) {
 
-        const array = this.produtos.getProdutos.filter(element => element.nome === refName)
-        array.forEach(item => {
-            item.preco = valor
-            item.quantidade = quantidade
-        })
+    //     let array = this.produtos.getProdutos
+    //     .find(element => element.nome === refName)
+    //     const newArray = array.forEach(item => {
+    //         const produto = new Produto('Playstation 5', 'Preto/Branco', '30cm', `${parseInt(quantidade)}`, `${item.preco}`, '../src/assets/imgs/ps5.png', 500)
+            
+    //     })
+    //     this.produtos.adiciona(newArray, this.produtos)
         
-        console.log(this.valorEntrega, this.produtos)
-        this.atualizaInformacoes(this.valorEntrega, this.produtos)
+    //     console.log(this.valorEntrega, this.produtos)
+    //     this.atualizaInformacoes(this.valorEntrega, this.produtos)
 
-    }
+    // }
 
     atualizaInformacoes(envio, produtos) {
 

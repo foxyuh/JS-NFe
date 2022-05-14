@@ -11,7 +11,8 @@ EventEmitter.on('Info-Total', value => {
     const produtos = value[1]
     
     const somaDosPrecos = produtos.getProdutos.reduce((valorAcumulado, numeroAtual) => {
-        const valor = Convert.realToDolar(numeroAtual.preco)
+        
+        const valor = numeroAtual.quantidade * Convert.realToDolar(numeroAtual.preco)
         valorAcumulado = valorAcumulado + valor
         return valorAcumulado
     }, 0)
