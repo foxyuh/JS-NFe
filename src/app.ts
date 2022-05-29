@@ -1,8 +1,6 @@
-import { EventEmitter } from "./utils/event-emitter.js";
 import { CheckoutController } from "./controllers/checkout-controller.js";
 
 const checkoutController = new CheckoutController();
-
 const $ = document.querySelector.bind(document)
 const $All = document.querySelectorAll.bind(document)
 
@@ -36,8 +34,8 @@ $('.tabela').addEventListener('change', function (event) {
         const envio = parent.querySelector('.number').innerText;
         const produtos = checkoutController.produtos
         
-        console.log(checkoutController.valorEntrega = envio)
-        console.log(envio, produtos)
+        // console.log(checkoutController.valorEntrega = envio)
+        // console.log(envio, produtos)
         checkoutController.atualizaInformacoes(envio, produtos);
         styleEvent()
     };
