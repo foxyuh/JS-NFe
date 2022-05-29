@@ -8,7 +8,7 @@ class PedidoLog {
 
         this.log.push(entrega, metodoDeEntrega);
 
-        console.log(this.log);
+        // console.log(this.log);
     };
 
 };

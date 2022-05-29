@@ -53,7 +53,7 @@ class CheckoutController {
                 437
                 ), this.produtos)
 
-                console.log(this.produtos)
+                // console.log(this.produtos)
         this.atualizaInformacoes(this.valorEntrega, this.produtos)
     };
 
