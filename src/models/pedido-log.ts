@@ -1,14 +1,11 @@
 export { PedidoLog };
 
 class PedidoLog {
+  log = [];
 
-    log = [];
+  adiciona(entrega, metodoDeEntrega) {
+    this.log.push(entrega, metodoDeEntrega);
 
-    adiciona(entrega, metodoDeEntrega) {
-
-        this.log.push(entrega, metodoDeEntrega);
-
-        // console.log(this.log);
-    };
-
-};
+    // console.log(this.log);
+  }
+}
