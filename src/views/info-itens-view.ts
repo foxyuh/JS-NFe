@@ -4,11 +4,9 @@ import { View } from "./view.js";
 export { InfoItensView };
 
 class InfoItensView extends View<Produtos> {
-    
-protected template(model: Produtos): string {
+  protected template(model: Produtos): string {
     return `
         ${model}
     `;
-};
-
-};
+  }
+}
