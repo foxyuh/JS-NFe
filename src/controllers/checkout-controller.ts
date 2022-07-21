@@ -55,7 +55,6 @@ class CheckoutController {
       ),
       this.produtos
     );
-
     // console.log(this.produtos)
     this.atualizaInformacoes(this.valorEntrega, this.produtos);
   }
