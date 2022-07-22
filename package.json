@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run build\" \"npm run lite\"",
+    "start": "concurrently \"npm run tsc\" \"npm run lite\"",
     "dev": "concurrently \"npm run lite\" \"npm run watch\"",
     "lite": "lite-server -c bs-config.js",
-    "build": "npm install --only=dev",
     "watch": "tsc -w"
   },
   "repository": {
@@ -21,12 +20,10 @@
     "url": "https://github.com/ufoxy/checkout-page/issues"
   },
   "homepage": "https://github.com/ufoxy/checkout-page#readme",
-  "devDependencies": {
-    "connect-history-api-fallback": "^1.6.0",
-    "lite-server": "^2.6.1",
-    "typescript": "^4.6.4"
-  },
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "connect-history-api-fallback": "^2.0.0",
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.4"
   }
 }
