@@ -48,7 +48,7 @@ class CheckoutController {
         "Pulse 3D",
         "Preto/Branco",
         "15cm",
-        2,
+        1,
         "479,90",
         "../src/assets/imgs/pulse3d.png",
         437
