@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run lite",
+    "start": "concurrently \"npm run build\" \"npm run lite\"",
     "dev": "concurrently \"npm run lite\" \"npm run watch\"",
     "lite": "lite-server -c bs-config.js",
     "build": "npm install --only=dev",
@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/ufoxy/checkout-page#readme",
   "devDependencies": {
-    "concurrently": "^7.2.1",
     "connect-history-api-fallback": "^1.6.0",
     "lite-server": "^2.6.1",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
   }
 }
