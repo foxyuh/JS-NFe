@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "npm install --only=dev",
     "start": "npm run lite",
     "dev": "concurrently \"npm run lite\" \"npm run watch\"",
     "lite": "lite-server -c bs-config.js",
