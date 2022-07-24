@@ -24,7 +24,7 @@ Veja como é usado: www.youtube.com.br
 - No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/ufoxy/sleep-scheduler
+git clone https://github.com/ufoxy/checkout-page
 ```
 - Agora instale as dependencias usando:
 ```
