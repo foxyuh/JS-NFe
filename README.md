@@ -37,6 +37,5 @@ npm start
 - Após compilar, irá abrir a página no seu navegador, se não abrir é só acessar o localhost:3000
 
 ...
-A
 
 ---
