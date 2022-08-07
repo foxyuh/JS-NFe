@@ -9,8 +9,7 @@ Este projeto é uma SPA construído com TS Vanilla, utilizei como pattern de pro
 O objetivo deste projeto foi para práticar programação funcional, POO, Prototipação, Design Patterns, etc... Também foi usado o conceito recente do JavaScript, o modificador de acesso; Private.
 
 A construção do layout e design da página foram feitas do zero, inspirado em uma template de outro checkout. Não utilizei CSS Frameworks.
-
-Veja como é usado: www.youtube.com.br
+<!--- Veja como é usado: www.youtube.com.br -->
 
 ...
 ## Linguagens, dependencias e libs utilizadas 📚
