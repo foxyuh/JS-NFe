@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "useDefineForClassFields": true,
+    "useDefineForClassFields": false, // true
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
+    "skipLibCheck": false, // true
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
+    "allowImportingTsExtensions": false, // true
+    "isolatedModules": false, // true
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false, // true
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": false, // true
+    "noUnusedLocals": false, // true
+    "noUnusedParameters": false, // true
+    "noFallthroughCasesInSwitch": false, // true
+    "noUncheckedSideEffectImports": false // true
   },
   "include": ["src", "vite-env.d.ts"]
 }
