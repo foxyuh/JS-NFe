@@ -37,7 +37,7 @@ class CheckoutController {
         "30cm",
         1,
         "4.399,90",
-        "https://ibb.co/Fkbnb8dC",
+        "https://i.ibb.co/Cp5W5VSD/ps5.png",
         500
       ),
       this.produtos
@@ -50,7 +50,7 @@ class CheckoutController {
         "15cm",
         1,
         "479,90",
-        "https://ibb.co/SXbfbcP0",
+        "https://i.ibb.co/3y2R2v7W/pulse3d.png",
         437
       ),
       this.produtos
