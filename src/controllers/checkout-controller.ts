@@ -37,7 +37,7 @@ class CheckoutController {
         "30cm",
         1,
         "4.399,90",
-        "https://media.discordapp.net/attachments/1332862486705344658/1332862621812129903/ps5.png?ex=6796cc8c&is=67957b0c&hm=5ef3dc403282dbeeedd40d727e3341250ec8350a59699fe882b67cea5e3ec78a",
+        "https://ibb.co/Fkbnb8dC",
         500
       ),
       this.produtos
@@ -50,7 +50,7 @@ class CheckoutController {
         "15cm",
         1,
         "479,90",
-        "https://media.discordapp.net/attachments/1332862486705344658/1332862635934351371/pulse3d.png?ex=6796cc8f&is=67957b0f&hm=219960acabd5ed882952cc7f9477be6d7b71c2a4569a5ecc275af39d21eb1c85",
+        "https://ibb.co/SXbfbcP0",
         437
       ),
       this.produtos
