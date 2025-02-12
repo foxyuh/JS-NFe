@@ -1,6 +1,6 @@
 ## Visão Geral do Projeto 💻
 <div align="center">
-<img src="https://media.discordapp.net/attachments/990708984212246529/1000878803570130995/unknown.png?width=1001&height=613"></img>
+<img src="https://i.ibb.co/RkbWr7Pg/P-gina-de-Pagamento-02-12-2025-02-30-PM.png"></img>
 </div>
 <br/>
 
